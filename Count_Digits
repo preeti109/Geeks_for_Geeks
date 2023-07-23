@@ -1,0 +1,13 @@
+class Solution{
+    static int evenlyDivides(int N){
+        int count=0, number=N;
+        while(number > 0) {
+            int temp = number%10;
+            if(temp>0 && N%temp==0) {
+                count++;
+            }
+            number = number / 10;
+        }
+        return count;
+    }
+}
