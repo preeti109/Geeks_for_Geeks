@@ -1,0 +1,10 @@
+class Solution {
+    static int subClock(int num1, int num2) {
+        // code here
+        int c = (num1-num2)%12;
+        if(c>=0)
+           return c;
+        else
+           return 12+c;
+    }
+};
