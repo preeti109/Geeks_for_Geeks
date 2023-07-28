@@ -1,0 +1,15 @@
+class Solution {
+    static String armstrongNumber(int n){
+        // code here
+        int sum=0, orig=n;
+        while(n!=0) {
+            int digit = n%10;
+            sum =  sum + digit*digit*digit;
+            n = n/10;
+        }
+        if(sum==orig)
+            return "Yes";
+        else
+            return "No";
+    }
+}
