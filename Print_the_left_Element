@@ -1,0 +1,8 @@
+class Solution {
+    public long leftElement(long arr[], long n) {
+        Arrays.sort(arr);
+        if(n%2==0)
+            return arr[(arr.length/2)-1];
+        return arr[arr.length/2]; 
+    }
+}
