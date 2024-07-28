@@ -1,0 +1,17 @@
+class Solution {
+  public:
+    vector<long long> lcmAndGcd(long long A, long long B) {
+        long long originalA = A, originalB = B;
+        
+        while (B != 0) {
+            long long temp = B;
+            B = A % B;
+            A = temp;
+        }
+        
+        long long gcd = A;
+        long long lcm = (originalA * originalB) / gcd;
+        
+        return {lcm, gcd};
+    }
+};
